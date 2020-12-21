@@ -61,6 +61,8 @@ class _MyAppState extends State<MyApp> {
     final imgData = base64.encode(Uint8List.view(buffer));
     SunmiPrinter.image(imgData);
 
+    SunmiPrinter.qrcode('this is a qrcode');
+
     SunmiPrinter.emptyLines(3);
   }
 

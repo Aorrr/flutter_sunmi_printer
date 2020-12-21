@@ -26,6 +26,7 @@ class SunmiPrinter {
   static const String PRINT_TEXT = "printText";
   static const String PRINT_ROW = "printRow";
   static const String PRINT_IMAGE = "printImage";
+  static const String PRINT_QRCODE = "printQrcode";
 
   static const MethodChannel _channel =
       const MethodChannel('flutter_sunmi_printer');
@@ -129,6 +130,15 @@ class SunmiPrinter {
     await _channel.invokeMethod(PRINT_IMAGE, {
       "base64": base64,
       "align": align.value,
+    });
+  }
+
+  static Future<void> qrcode(String data,
+      {int modulesize = 8, int errorlevel = 3}) async {
+    await _channel.invokeMethod(PRINT_QRCODE, {
+      "data": data,
+      "modulesize": modulesize,
+      "errorlevel": errorlevel,
     });
   }
 }

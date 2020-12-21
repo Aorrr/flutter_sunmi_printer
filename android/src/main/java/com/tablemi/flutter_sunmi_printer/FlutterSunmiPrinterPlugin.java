@@ -107,7 +107,7 @@ public class FlutterSunmiPrinterPlugin implements FlutterPlugin, MethodCallHandl
       String data = call.argument("data");
       int modulesize = call.argument("modulesize");
       int errorlevel = call.argument("errorlevel");
-      flutterSunmiPrinterModule.printImage(data, modulesize, errorlevel);
+      flutterSunmiPrinterModule.printQrcode(data, modulesize, errorlevel);
       result.success(null);
     } else {
       result.notImplemented();
