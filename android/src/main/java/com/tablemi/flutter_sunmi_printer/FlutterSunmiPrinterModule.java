@@ -133,6 +133,11 @@ public class FlutterSunmiPrinterModule {
     }
   }
 
+  public void printQrcode(String data, int modulesize, int errorlevel) {
+    AidlUtil.getInstance().printQr(data, modulesize, errorlevel);
+    // AidlUtil.getInstance().lineWrap(1);
+  }
+
   public void printImage(String base64, int align) {
     byte[] bytes = Base64Utils.decode(base64);
     for (int i = 0; i < bytes.length; ++i) {
