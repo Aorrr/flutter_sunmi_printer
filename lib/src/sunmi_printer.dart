@@ -27,6 +27,7 @@ class SunmiPrinter {
   static const String PRINT_ROW = "printRow";
   static const String PRINT_IMAGE = "printImage";
   static const String PRINT_QRCODE = "printQrcode";
+  static const String CUT = "cut";
 
   static const MethodChannel _channel =
       const MethodChannel('flutter_sunmi_printer');
@@ -140,5 +141,9 @@ class SunmiPrinter {
       "modulesize": modulesize,
       "errorlevel": errorlevel,
     });
+  }
+
+  static Future<void> cut() async {
+    await _channel.invokeMethod(CUT);
   }
 }

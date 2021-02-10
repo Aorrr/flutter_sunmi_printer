@@ -26,6 +26,7 @@ public class FlutterSunmiPrinterPlugin implements FlutterPlugin, MethodCallHandl
   private String PRINT_ROW = "printRow";
   private String PRINT_IMAGE = "printImage";
   private String PRINT_QRCODE = "printQrcode";
+  private String CUT = "cut";
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
@@ -108,6 +109,9 @@ public class FlutterSunmiPrinterPlugin implements FlutterPlugin, MethodCallHandl
       int modulesize = call.argument("modulesize");
       int errorlevel = call.argument("errorlevel");
       flutterSunmiPrinterModule.printQrcode(data, modulesize, errorlevel);
+      result.success(null);
+    } else if (call.method.equals(CUT)) {
+      flutterSunmiPrinterModule.cut();
       result.success(null);
     } else {
       result.notImplemented();
