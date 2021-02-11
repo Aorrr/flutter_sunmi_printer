@@ -362,4 +362,12 @@ public class AidlUtil {
             e.printStackTrace();
         }
     }
+
+    public void autoOutPaper() {
+        try {
+            woyouService.autoOutPaper(null);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+    }
 }
