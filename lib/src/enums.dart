@@ -17,9 +17,9 @@ class SunmiAlign {
 class SunmiSize {
   const SunmiSize._internal(this.value);
   final int value;
-  static const xs = SunmiSize._internal(14);
-  static const sm = SunmiSize._internal(18);
-  static const md = SunmiSize._internal(24);
-  static const lg = SunmiSize._internal(36);
-  static const xl = SunmiSize._internal(42);
+  static const xs = SunmiSize._internal(18);
+  static const sm = SunmiSize._internal(24);
+  static const md = SunmiSize._internal(36);
+  static const lg = SunmiSize._internal(50);
+  static const xl = SunmiSize._internal(60);
 }
