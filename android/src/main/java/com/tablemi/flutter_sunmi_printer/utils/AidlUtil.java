@@ -138,8 +138,8 @@ public class AidlUtil {
         List<String> info = new ArrayList<>();
         PackageManager packageManager = context.getPackageManager();
         try {
-            woyouService.getPrintedLength(generateCB(printerCallback1));
-            woyouService.getPrinterFactory(generateCB(printerCallback2));
+//            woyouService.getPrintedLength(generateCB(printerCallback1));
+//            woyouService.getPrinterFactory(generateCB(printerCallback2));
             info.add(woyouService.getPrinterSerialNo());
             info.add(woyouService.getPrinterModal());
             info.add(woyouService.getPrinterVersion());
@@ -365,7 +365,7 @@ public class AidlUtil {
 
     public void autoOutPaper() {
         try {
-            woyouService.autoOutPaper(null);
+            woyouService.cutPaper(null);
         } catch (RemoteException e) {
             e.printStackTrace();
         }
