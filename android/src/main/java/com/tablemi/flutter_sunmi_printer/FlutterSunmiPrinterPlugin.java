@@ -27,6 +27,7 @@ public class FlutterSunmiPrinterPlugin implements FlutterPlugin, MethodCallHandl
   private String PRINT_IMAGE = "printImage";
   private String PRINT_QRCODE = "printQrcode";
   private String CUT = "cut";
+  private String OPEN_CASH_DRAWER = "openCashDrawer";
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
@@ -112,6 +113,9 @@ public class FlutterSunmiPrinterPlugin implements FlutterPlugin, MethodCallHandl
       result.success(null);
     } else if (call.method.equals(CUT)) {
       flutterSunmiPrinterModule.cut();
+      result.success(null);
+    } else if (call.method.equals(OPEN_CASH_DRAWER)) {
+      flutterSunmiPrinterModule.openCashDrawer();
       result.success(null);
     } else {
       result.notImplemented();

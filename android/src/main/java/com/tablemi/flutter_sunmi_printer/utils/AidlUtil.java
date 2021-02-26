@@ -370,4 +370,12 @@ public class AidlUtil {
             e.printStackTrace();
         }
     }
+
+    public void openCashDrawer() {
+        try {
+            woyouService.openDrawer(null);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+    }
 }

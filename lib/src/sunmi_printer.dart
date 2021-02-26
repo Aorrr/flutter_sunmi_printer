@@ -28,6 +28,7 @@ class SunmiPrinter {
   static const String PRINT_IMAGE = "printImage";
   static const String PRINT_QRCODE = "printQrcode";
   static const String CUT = "cut";
+  static const String OPEN_CASH_DRAWER = "openCashDrawer";
 
   static const MethodChannel _channel =
       const MethodChannel('flutter_sunmi_printer');
@@ -145,5 +146,9 @@ class SunmiPrinter {
 
   static Future<void> cut() async {
     await _channel.invokeMethod(CUT);
+  }
+
+  static Future<void> openCashDrawer() async {
+    await _channel.invokeMethod(OPEN_CASH_DRAWER);
   }
 }

@@ -154,4 +154,8 @@ public class FlutterSunmiPrinterModule {
   public void cut() {
     AidlUtil.getInstance().autoOutPaper();
   }
+
+  public void openCashDrawer() {
+    AidlUtil.getInstance().openCashDrawer();
+  }
 }
