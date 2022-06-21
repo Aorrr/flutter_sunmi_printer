@@ -1,10 +1,4 @@
-/*
- * flutter_sunmi_printer
- * Created by Andrey U.
- * 
- * Copyright (c) 2020. All rights reserved.
- * See LICENSE for distribution and usage details.
- */
+
 
 class SunmiAlign {
   const SunmiAlign._internal(this.value);

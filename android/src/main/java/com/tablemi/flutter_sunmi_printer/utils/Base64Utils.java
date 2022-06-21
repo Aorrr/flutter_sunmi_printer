@@ -16,12 +16,7 @@ public class Base64Utils {
                     30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, -1, -1,
                     -1, -1, -1};
 
-    /**
-     * 加密
-     *
-     * @param data
-     * @return
-     */
+
     public static String encode(byte[] data) {
         StringBuffer sb = new StringBuffer();
         int len = data.length;
@@ -52,12 +47,7 @@ public class Base64Utils {
         return sb.toString();
     }
 
-    /**
-     * 解密
-     *
-     * @param str
-     * @return
-     */
+
     public static byte[] decode(String str) {
         try {
             return decodePrivate(str);

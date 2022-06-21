@@ -12,7 +12,7 @@ import com.google.zxing.qrcode.QRCodeWriter;
 import java.util.Hashtable;
 
 public class BytesUtil {
-    //字节流转16进制字符串
+
     public static String getHexStringFromBytes(byte[] data) {
         if (data == null || data.length <= 0) {
             return null;
@@ -27,12 +27,12 @@ public class BytesUtil {
         return sb.toString();
     }
 
-    //单字符转字节
+
     private static byte charToByte(char c) {
         return (byte) "0123456789ABCDEF".indexOf(c);
     }
 
-    //16进制字符串转字节数组
+
     @SuppressLint("DefaultLocale")
     public static byte[] getBytesFromHexString(String hexstring){
         if(hexstring == null || hexstring.equals("")){
@@ -144,13 +144,7 @@ public class BytesUtil {
         return data;
     }
 
-    /**
-     * 生成二维码字节流
-     *
-     * @param data
-     * @param size
-     * @return
-     */
+
     public static byte[] getZXingQRCode(String data, int size) {
         try {
             Hashtable<EncodeHintType, String> hints = new Hashtable<EncodeHintType, String>();
@@ -202,9 +196,7 @@ public class BytesUtil {
         }
     }
 
-    /**
-     * 将bitmap图转换为头四位有宽高的光栅位图
-     */
+
     public static byte[] getBytesFromBitMap(Bitmap bitmap) {
         int width = bitmap.getWidth();
         int height = bitmap.getHeight();
@@ -233,9 +225,7 @@ public class BytesUtil {
         return rv;
     }
 
-    /**
-     * 将bitmap转成按mode指定的N点行数据
-     */
+
     public static byte[] getBytesFromBitMap(Bitmap bitmap, int mode) {
         int width = bitmap.getWidth();
         int height = bitmap.getHeight();
@@ -297,11 +287,7 @@ public class BytesUtil {
                 : ((int) (0.29900 * r + 0.58700 * g + 0.11400 * b) < 200)) ? (byte) 1 : (byte) 0;
     }
 
-    /**
-     * 生成间断性黑块数据
-     * @param w : 打印纸宽度, 单位点
-     * @return
-     */
+
     public static byte[] initBlackBlock(int w){
         int ww = (w + 7)/8 ;
         int n = (ww + 11)/12;
@@ -329,12 +315,7 @@ public class BytesUtil {
         return data;
     }
 
-    /**
-     * 生成一大块黑块数据
-     * @param h : 黑块高度, 单位点
-     * @param w : 黑块宽度, 单位点, 8的倍数
-     * @return
-     */
+
     public static byte[] initBlackBlock(int h, int w){
         int hh = h;
         int ww = (w - 1)/8 + 1;

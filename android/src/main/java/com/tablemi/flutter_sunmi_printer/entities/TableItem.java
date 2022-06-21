@@ -1,8 +1,6 @@
 package com.tablemi.flutter_sunmi_printer.entities;
 
-/**
- * Created by Administrator on 2017/5/24.
- */
+
 
 public class TableItem {
     private String[] text;

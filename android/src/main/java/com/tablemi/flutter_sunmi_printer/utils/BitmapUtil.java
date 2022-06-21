@@ -17,15 +17,7 @@ import java.util.Hashtable;
 import java.util.Map;
 
 public class BitmapUtil {
-    /**
-     * 生成条码bitmap
-     *
-     * @param content
-     * @param format
-     * @param width
-     * @param height
-     * @return
-     */
+
     public static Bitmap generateBitmap(String content, int format, int width, int height) {
         if (content == null || content.equals(""))
             return null;
@@ -89,11 +81,7 @@ public class BitmapUtil {
         return null;
     }
 
-    /**
-     * @param bytes
-     * @param opts
-     * @return Bitmap
-     */
+
     public static Bitmap getPicFromBytes(byte[] bytes, BitmapFactory.Options opts) {
         if (bytes != null)
             if (opts != null)
@@ -104,14 +92,7 @@ public class BitmapUtil {
     }
 
 
-    /**
-     * 生成二维码 要转换的地址或字符串,可以是中文
-     *
-     * @param url
-     * @param width
-     * @param height
-     * @return
-     */
+
     public static Bitmap createQRImage(String url, final int width, final int height) {
         try {
             // 判断URL合法性
@@ -146,9 +127,7 @@ public class BitmapUtil {
         return null;
     }
 
-    /**
-     * 检查图片是否超过一定值，是则缩小
-     */
+
     public static Bitmap convertToThumb(byte[] buffer, float size)
     {
         // 获取原图宽度
