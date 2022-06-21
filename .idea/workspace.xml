@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c1644c0-c8ff-492f-8ef9-7fd61cb7e2bf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/android/src/main/aidl/woyou/aidlservice/jiuiv5/ICallback.aidl" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/aidl/woyou/aidlservice/jiuiv5/ICallback.aidl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/src/main/aidl/woyou/aidlservice/jiuiv5/ITax.aidl" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/aidl/woyou/aidlservice/jiuiv5/ITax.aidl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/src/main/aidl/woyou/aidlservice/jiuiv5/IWoyouService.aidl" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/aidl/woyou/aidlservice/jiuiv5/IWoyouService.aidl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

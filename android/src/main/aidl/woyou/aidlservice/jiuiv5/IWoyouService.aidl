@@ -1,5 +1,3 @@
-//T、S系列机型
-
 package woyou.aidlservice.jiuiv5;
 
 import woyou.aidlservice.jiuiv5.ICallback;
